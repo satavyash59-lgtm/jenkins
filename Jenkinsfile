@@ -1,12 +1,12 @@
 pipeline {
    agent any
    environment {
-        PP_NMAE = 'demo'
+        APP_NMAE = 'demo'
 
    }
    stages {
-      stage('Build'){
-         environment {
+      stage('Build') {
+          environment {
               BUILD_MODE = 'production'
          }
          steps {
