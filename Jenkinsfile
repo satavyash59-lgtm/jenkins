@@ -28,6 +28,11 @@ pipeline {
              input message: 'Deploy to production'
              }
          }
+        stage('Deploy'){
+            steps{
+                sh 'echo deploying is done'
+            }
+        }
     } 
 } 
     
