@@ -7,10 +7,10 @@ pipeline {
                     
                 }
                 stage('Test'){
-                    steps{ sh 'echo Testing'}
+                    steps {  sh 'echo Testing'}
                 }
                 stage('Deploy'){
-                    steps{ sh 'echo Deploying'}
+                    steps { sh 'echo Deploying'}
                 }
                 
             }
