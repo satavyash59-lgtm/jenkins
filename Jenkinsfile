@@ -9,7 +9,7 @@ pipeline {
                 steps {  sh 'echo Testing'}
                 }
             stage('Deploy'){
-                teps { sh 'echo Deploying'}
+                steps { sh 'echo Deploying'}
                 }
                 
             }
