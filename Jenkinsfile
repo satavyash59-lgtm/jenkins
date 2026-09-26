@@ -5,12 +5,11 @@ pipeline {
                 steps {
                      steps { sh 'echo building'}
                     
+            stage('Test'){
+                steps {  sh 'echo Testing'}
                 }
-                stage('Test'){
-                    steps {  sh 'echo Testing'}
-                }
-                stage('Deploy'){
-                    steps { sh 'echo Deploying'}
+            stage('Deploy'){
+                teps { sh 'echo Deploying'}
                 }
                 
             }
