@@ -14,6 +14,7 @@ pipeline {
                     steps{ sh 'echo integration tests '}
                 }
             }
+        }
         stage('Approve'){
             when {expression {params.ENVIRONMENT == 'production'}}
             steps {input message: 'Deploy to production'}
