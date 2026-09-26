@@ -3,7 +3,11 @@ pipeline {
     stages {
             stage('Hello') {
                 steps {
-                    echo 'hello, Jenkins!'
+                    echo 'This just prints a message'
+                    sh 'echo this runs a real shell command'
+                    sh 'pwd'
+                    sh 'ls -la'
+                    
                 }
             }
             
