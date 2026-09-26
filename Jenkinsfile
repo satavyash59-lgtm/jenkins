@@ -4,11 +4,25 @@ pipeline {
         choice(name: 'ENVIRONMENT', choices: ['staging', 'production'], description: 'target')
     }
     stages {
-           stage('Approve'){
-               steps{
-                   input message: 'Deploy to production'
-               }
-           } 
+     
+        stage('Tests') {
+            parallel {
+                stage('unit') { 
+                    steps { 
+                        sh 'echo unit tests' 
+                    }
+                }
+                stage('Integration') { 
+                    steps { 
+                        sh 'echo integration tests' 
+                    }
+                }
+            }
+        }
+        stage('Approve') {
+            steps {
+                input message: 'Deploy to production'
+            }
         }
     }
-
+}
