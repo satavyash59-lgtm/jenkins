@@ -1,6 +1,6 @@
 pipeline {
     agent any
-    parameters { choice: 'ENVIRONMENT', choice: ['staging', 'production'],description:'Target'}
+    parameters { choice: 'ENVIRONMENT', choices: ['staging', 'production'], description:'Target'}
     stages{
         stage('build'){
             steps{ sh 'echo Building'}
